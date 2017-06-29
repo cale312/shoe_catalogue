@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/handlebars-v4.0.5.js"></script>
+    <title>Play ball!</title>
+    <link rel="icon" href="img/logo.jpg">
+</head>
+
+<body>
+    <header class="header-wrapper">
+        <h1>Play Ball!
+                <br>Cleat Shop</h1>
+    </header>
+    <br><br>
+    <span class="option-wrapper">
+        <input type="text" placeholder="brand" class="brand" list="brand">
+        <datalist id="brand"></datalist>
+        <input type="text" placeholder="color" class="color" list="color">
+        <datalist id="color"></datalist>
+        <input type="text" placeholder="size" class="size" list="size">
+        <datalist id="size"></datalist>
+        <br><br>
+        <button class="find-btn">find</button>
+    </span>
+    <div  style="float: left; margin: 10px 0px 10px -2px; postion: fixed;"><img src="img/bart%20Peeking.png" width="80" align="center">&trade;</div>
+    <hr>
+    <div class="display-table"></div>
+    <br><br>
+    <hr>
+    <button class="show-stock">show stock</button>
+    <button class="hide-stock">hide stock</button>
+    <br><br>
+    <div class="stock-updater">
+        <input type="text" placeholder="add new brand" class="new_brand">
+        <input type="text" placeholder="add new color" class="new_color">
+        <input type="text" placeholder="add new size" class="new_size">
+        <input type="text" placeholder="add new price" class="new_price">
+        <input type="text" placeholder="stock amount" class="no-instock">
+        <br><br>
+        <button class="add-btn">update</button>
+    </div>
+    <br><br>
+    <div class="stock-wrapper">
+        <div class="function-fields">
+            <input type="text" name="" value="" placeholder="filter" class="filter">
+            <button class="filter-btn">filter</button>
+        </div>
+        <br>
+        <div class="all-stock"></div>
+    </div>
+</body>
+<hr>
+<div class="footer">
+    <ul class="list-inline">
+        <li>
+            <a href="https://www.instagram.com/sogaxa_zikisa/" class="btn-social btn-outline" target="_blank"><img src="img/instagram.png" alt=""></a>
+        </li>
+        <li>
+            <a href="https://www.facebook.com/sogaxacale" class="btn-social btn-outline" target="_blank"><img src="img/facebook.png" alt=""></a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/in/zikisacalesogaxa" class="btn-social btn-outline" target="_blank"><img src="img/Linkedin.png" alt=""></a>
+        </li>
+        <li>
+            <a href="https://www.github.com/cale312" class="btn-social btn-outline" target="_blank"><img src="img/github.png" alt=""></a>
+        </li>
+    </ul>
+    <h4>site By: Zikisa Cale Sogaxa</h4>
+</div>
+
+<script type="text/x-handlebars" class="filter-template">
+    <table align="center">
+        <tr>
+            <th>Brand</th>
+            <th>Color</th>
+            <th>Size</th>
+            <th>Price</th>
+            <th>No. stock</th>
+        </tr>
+        {{#data}}
+        <tr>
+            <td>{{brand}}</td>
+            <td>{{color}}</td>
+            <td>US/{{size}}</td>
+            <td>R {{price}}</td>
+            <td>{{in_stock}}</td>
+        </tr>
+        {{/data}}
+    </table>
+</script>
+<script type="text/x-handlebars" class="stock-template">
+    <table align="center">
+        <tr>
+            <th>Brand</th>
+            <th>Color</th>
+            <th>Size</th>
+            <th>Price</th>
+            <th>No. stock</th>
+        </tr>
+        {{#data}}
+        <tr>
+            <td>{{brand}}</td>
+            <td>{{color}}</td>
+            <td>US/{{size}}</td>
+            <td>R {{price}}</td>
+            <td>{{in_stock}}</td>
+        </tr>
+        {{/data}}
+    </table>
+</script>
+<script type="text/x-handlebars" class="brand-template">
+    {{#each sort_brand}}
+    <option>{{this}}</option>
+    {{/each}}
+</script>
+<script type="text/x-handlebars" class="size-template">
+    {{#each sort_size}}
+    <option>{{this}}</option>
+    {{/each}}
+</script>
+<script type="text/x-handlebars" class="color-template">
+    {{#each sort_color}}
+    <option>{{this}}</option>
+    {{/each}}
+</script>
+<script src="js/app.js"></script>
+
+</html>

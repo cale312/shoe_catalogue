@@ -1,0 +1,25 @@
+body{background: url('../img/header-bg.jpg') no-repeat; background-size: cover; margin: 0px; font-family: helvetica; text-align: center;}
+hr{width: 30%;}
+.header-wrapper{padding: 55px; margin: 0px; background: gold; box-shadow: 0px 2px 5px; text-align: center; font-weight: bolder;}
+.header-wrapper h1{font-size: 2.5em; float: left; margin: -45px; letter-spacing: .2em;}
+.filter-btn, .find-btn, .show-stock, .hide-stock, .add-btn{padding: 8px 23px; font-family: helvetica; letter-spacing: .2em; background: black; cursor: pointer; color: #fff; border: solid .01em black; font-weight: bolder; font-size: 1em; border-radius: 5px;}
+.filter-btn:hover, .find-btn:hover, .show-stock:hover, .hide-stock:hover, .add-btn:hover{background: gold; color: black;}
+.display-table, .all-stock{display: inline-block; padding: 10px; font-weight: bolder;}
+th{padding: 5px 50px; border: ; text-transform: capitalize; background: rgba(0, 0, 0, 0.5);}
+td{border-bottom: solid 1px; text-transform: capitalize;}
+.stock-updater input, .option-wrapper input{padding: 5px; border: inset; font-weight: bolder; margin: 2px;}
+.function-fields{display: none;}
+.stock-wrapper input{padding: 5px 10px; border: inset; font-weight: bolder; text-align: center;}
+{border: solid .01em black; padding: 5px 20px; background: black; color: #fff; border-radius: 5px; cursor: pointer; font-weight: bolder;}
+.footer img{width: 50px;}
+.footer h4{float: left; text-decoration: underline; margin: 5px;}
+.list-inline li{display: inline-block; float: right; margin: 5px;}
+
+/*@media (max-width: 360px) {
+    .header-wrapper h1{font-family: helvetica; font-size: 5em; font-weight: bolder; text-shadow: 0px 2px 5px; letter-spacing: .2em; float: none;}
+    .header-wrapper{margin: 0px; padding: 50px; background: gold; box-shadow: 0px 2px 5px; text-align: center;}
+    .find-btn, .show-stock, .hide-stock, .add-btn, .filter-btn{border: none; padding: 20px 80px; font-family: helvetica; font-size: 2em;}
+    .stock-updater input, .option-wrapper input{padding: 15px; border: inset; font-weight: bolder; margin: 2px; font-size: 2em;}
+    .all-stock, .display-table{display: inline-block; padding: 30px; font-size: 2em;}
+    .stock-wrapper input{padding: 20px 80px; border: inset; font-weight: bolder; text-align: center; font-size: 2em;}
+}*/
